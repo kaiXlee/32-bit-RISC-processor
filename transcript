@@ -1,0 +1,68 @@
+# Compile of addr_bus_mux.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_test.v was successful.
+# Compile of flag_register.v was successful.
+# Compile of instruction_memory.v was successful.
+# Compile of ldr_mux.v was successful.
+# Compile of mem_control_unit.v was successful.
+# Compile of memory_and_instruction_fetch_test.v was successful.
+# Compile of memory_control.v was successful.
+# Compile of memory_unit_test.v was successful.
+# Compile of processor_32_bit.v was successful.
+# Compile of program_counter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of RAM_test.v was successful.
+# Compile of RB_test.v was successful.
+# Compile of Register_Banks.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim engr468_16_bit_processor.mem_control_unit_test
+# vsim engr468_16_bit_processor.mem_control_unit_test 
+# Start time: 10:49:38 on Nov 25,2020
+# Loading engr468_16_bit_processor.mem_control_unit_test
+# Loading engr468_16_bit_processor.mem_control_unit
+# Loading engr468_16_bit_processor.memory_control
+# Loading engr468_16_bit_processor.addr_bus_mux
+# Loading engr468_16_bit_processor.ldr_mux
+run
+#                    0Testing memory control
+#                    0 clk=0 || reset=1 || rw=x || addr_mux_out=xxxxxxxxxxxxxxxx || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                    5 clk=1 || reset=1 || rw=0 || addr_mux_out=0000000000000001 || ldr_mux_out=11111111111111111111111111111111 || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                   10 clk=0 || reset=1 || rw=0 || addr_mux_out=0000000000000001 || ldr_mux_out=11111111111111111111111111111111 || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                   15 clk=1 || reset=1 || rw=0 || addr_mux_out=1000000000000010 || ldr_mux_out=11111111111111111111111111111110 || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                   20 clk=0 || reset=1 || rw=0 || addr_mux_out=1000000000000010 || ldr_mux_out=11111111111111111111111111111110 || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                   25 clk=1 || reset=1 || rw=0 || addr_mux_out=1000000000000010 || ldr_mux_out=11111111111111111111111111111110 || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                   30 clk=0 || reset=1 || rw=0 || addr_mux_out=1000000000000010 || ldr_mux_out=11111111111111111111111111111110 || mem_data_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                   35 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   40 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   45 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   50 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   55 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   60 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   65 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   70 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   75 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   80 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   85 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   90 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                   95 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+run
+#                  100 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  105 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  110 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  115 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  120 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  125 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  130 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  135 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  140 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  145 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  150 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  155 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  160 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  165 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  170 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  175 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  180 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  185 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  190 clk=0 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
+#                  195 clk=1 || reset=1 || rw=1 || addr_mux_out=0000000000000011 || ldr_mux_out=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || mem_data_out=00000000000000000000000000000101
