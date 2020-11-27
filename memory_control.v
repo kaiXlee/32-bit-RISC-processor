@@ -25,7 +25,7 @@ module memory_control(
 	
 	
 	
-	always @(posedge clk) begin
+	always @(op_code) begin
 		if (op_code == 4'b1101)	begin // LDR
 			// fetch from memory
 			// eg. LDR R4, [R5] == LDR dest_reg, src1 (stores mem content into R4)

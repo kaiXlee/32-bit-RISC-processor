@@ -15,13 +15,14 @@ module memory_unit_test;
 	
 	initial
 	begin
-		$monitor($time, " clk=%b || reset=%b || rw=%b || address=%b || memory_word=%b || current_instruction=%b",
+		$monitor($time, " clk=%b || reset=%b || rw=%b || address=%b || memory_word=%b || current_instruction=%b || pc_count=%d",
 			clk,
 			reset,
 			rw,
 			address,
 			memory_word,
-			current_instruction
+			current_instruction,
+			pc_count
 		);
 	end
 	
@@ -31,7 +32,7 @@ module memory_unit_test;
 	#3 reset = 0;
 	#4 reset = 1;
 	
-	#50 $finish; // Stop the simulation after 50 time units
+	#100 $finish; // Stop the simulation after 50 time units
 	end
 	
 	always #5 clk =~ clk; // How to create a clk pulses of period 10

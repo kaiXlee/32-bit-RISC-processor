@@ -1,0 +1,115 @@
+{C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/memory_control.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/memory_control.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memory_control
+
+Top level modules:
+	memory_control
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module processor_32_bit
+
+Top level modules:
+	processor_32_bit
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/Register_Banks.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/Register_Banks.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module register_banks
+-- Compiling module MUX
+-- Compiling module DECODER
+
+Top level modules:
+	register_banks
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/addr_bus_mux.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/addr_bus_mux.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module addr_bus_mux
+
+Top level modules:
+	addr_bus_mux
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/mem_control_unit.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/mem_control_unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mem_control_unit
+
+Top level modules:
+	mem_control_unit
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/memory_unit_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/memory_unit_test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memory_unit_test
+
+Top level modules:
+	memory_unit_test
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RAM.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RAM.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit_test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module processor_32_bit_test
+
+Top level modules:
+	processor_32_bit_test
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ALU_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ALU_test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU_test
+
+Top level modules:
+	ALU_test
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/instruction_memory.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:\Users\Kyle\Desktop\Engineering_Year_5\ENGR 468 Advanced Digital Systems Design\Project\32-bit-RISC-processor\instruction_memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RB_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RB_test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RB_test
+
+Top level modules:
+	RB_test
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ldr_mux.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ldr_mux.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ldr_mux
+
+Top level modules:
+	ldr_mux
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/memory_and_instruction_fetch_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/memory_and_instruction_fetch_test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mem_control_unit_test
+
+Top level modules:
+	mem_control_unit_test
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/flag_register.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/flag_register.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module status_registers
+
+Top level modules:
+	status_registers
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/program_counter.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/program_counter.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module program_counter
+
+Top level modules:
+	program_counter
+
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RAM_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RAM_test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RAM_test
+
+Top level modules:
+	RAM_test
+
+} {} {}}

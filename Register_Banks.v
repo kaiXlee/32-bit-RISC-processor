@@ -1,6 +1,7 @@
-module register_banks(destination, src1_sel, src2_sel, ldr_mux_in, src1_out, src2_out);
+module register_banks(destination, src1_sel, src2_sel, ldr_mux_in, reg_write, src1_out, src2_out);
     input [3:0] destination, src1_sel, src2_sel;
     input [31:0] ldr_mux_in;
+	input reg_write;
     output [31:0] src1_out, src2_out;
 	
     wire [15:0] enable;
@@ -11,32 +12,96 @@ module register_banks(destination, src1_sel, src2_sel, ldr_mux_in, src1_out, src
     MUX mux2(src2_sel, registers[0], registers[1], registers[2], registers[3], registers[4], registers[5], registers[6], registers[7], registers[8], registers[9],
 		registers[10], registers[11], registers[12], registers[13], registers[14], registers[15], src2_out);
     DECODER decoder1(destination, enable);
+	
+	initial
+	begin
+		$monitor($time, " R0=%d || R1=%d || R2=%d || R3=%d || R4=%d || R5=%d || R6=%d || R7=%d",
+			registers[0],
+			registers[1],
+			registers[2],
+			registers[3],
+			registers[4],
+			registers[5],
+			registers[6],
+			registers[7]
+		);
+	end
 
-    always @(enable) begin
-        // if (rw) begin
-		case (enable)
-			16'b0000000000000001: registers[0] = ldr_mux_in;
-			16'b0000000000000010: registers[1] = ldr_mux_in;
-			16'b0000000000000100: registers[2] = ldr_mux_in;
-			16'b0000000000001000: registers[3] = ldr_mux_in;
-			16'b0000000000010000: registers[4] = ldr_mux_in;
-			16'b0000000000100000: registers[5] = ldr_mux_in;
-			16'b0000000001000000: registers[6] = ldr_mux_in;
-			16'b0000000010000000: registers[7] = ldr_mux_in;
-			16'b0000000100000000: registers[8] = ldr_mux_in;
-			16'b0000001000000000: registers[9] = ldr_mux_in;
-			16'b0000010000000000: registers[10] = ldr_mux_in;
-			16'b0000100000000000: registers[11] = ldr_mux_in;
-			16'b0001000000000000: registers[12] = ldr_mux_in;
-			16'b0010000000000000: registers[13] = ldr_mux_in;
-			16'b0100000000000000: registers[14] = ldr_mux_in;
-			16'b1000000000000000: registers[15] = ldr_mux_in;
-			default: begin
-				// do nothing
-			end
-		endcase
-        // end
+	// initial
+	// begin
+		// $monitor($time, " destination=%d || enable=%b || R5=%d || ldr_mux_in=%d",
+			// destination,
+			// enable,
+			// registers[5],
+			// ldr_mux_in
+			
+		// );
+	// end
+
+
+    always @(enable, ldr_mux_in) begin
+		if (reg_write) begin
+			case (enable)
+				16'b0000000000000001: begin
+					registers[0] = ldr_mux_in;	// R0
+				end
+				16'b0000000000000010: begin 
+					registers[1] = ldr_mux_in;	// R1
+					// $display($time);
+					// $display("this is R1");
+				end
+				16'b0000000000000100: begin
+					registers[2] = ldr_mux_in;
+				end
+				16'b0000000000001000: begin
+					registers[3] = ldr_mux_in;
+				end
+				16'b0000000000010000: begin
+					registers[4] = ldr_mux_in;
+				end
+				16'b0000000000100000: begin
+					registers[5] = ldr_mux_in;
+				end
+				16'b0000000001000000: begin
+					registers[6] = ldr_mux_in;
+				end
+				16'b0000000010000000: begin
+					registers[7] = ldr_mux_in;
+				end
+				16'b0000000100000000: begin
+					registers[8] = ldr_mux_in;
+				end
+				16'b0000001000000000: begin
+					registers[9] = ldr_mux_in;
+				end
+				16'b0000010000000000: begin
+					registers[10] = ldr_mux_in;
+				end
+				16'b0000100000000000: begin
+					registers[11] = ldr_mux_in;
+				end
+				16'b0001000000000000: begin
+					registers[12] = ldr_mux_in;
+				end
+				16'b0010000000000000: begin
+					registers[13] = ldr_mux_in;
+				end
+				16'b0100000000000000: begin
+					registers[14] = ldr_mux_in;
+				end
+				16'b1000000000000000: begin
+					registers[15] = ldr_mux_in;	// R16
+				end
+				default: begin
+					// do nothing
+				end
+			endcase
+		end
+		
+		// $display("Result is: R%d = %d", destination, registers[destination]);
+		
     end
+	
 endmodule
 
 
