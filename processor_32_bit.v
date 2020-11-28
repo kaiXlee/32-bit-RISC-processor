@@ -72,12 +72,12 @@ module processor_32_bit(clk, reset);
 		.src1(rb_src1_out),
 		.src2(rb_src2_out),
 		.alu_result(alu_result_out),
+		.conditions(intr_condition_out),
 		.mem_data_in(data_out),
 		.addr_mux_out(mem_ctrl_addr_mux_out),
 		.ldr_mux_out(mem_ctrl_ldr_mux_out),
 		.rw(mem_ctrl_rw),
-		.mem_data_out(mem_ctrl_data_out),
-		.reg_write(reg_write)
+		.mem_data_out(mem_ctrl_data_out)
 	);
 
 
@@ -99,7 +99,8 @@ module processor_32_bit(clk, reset);
 		.conditions(intr_condition_out),
 		.s(intr_s_bit_out),
 		.flags(alu_flags_out),
-		.result(alu_result_out)
+		.result(alu_result_out),
+		.reg_write(reg_write)
 	);
 
 

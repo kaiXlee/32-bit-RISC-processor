@@ -27,6 +27,7 @@ module instruction_memory(clk, reset, pc_count, instruction_in, address_out, ins
 	end
 	
 	always @(posedge clk) begin
+		$display("Program counter: %d || Instruction Fetched... %b", pc_count, instruction_in);
 		// fetch from memory
 		address_out = pc_count;
 		

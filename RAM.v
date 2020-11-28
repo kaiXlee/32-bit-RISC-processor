@@ -10,7 +10,7 @@ module ram (clk, rw, pc_addr, address, data_in, data_out, fetch_instruction_out)
 
 	 
 	initial begin
-		$readmemb("Data File Example 2020W_32bit.txt", ram);
+		$readmemb("final_presentation.txt", ram);
 		// $monitor($time, " memory=%p",
 			// ram
 		// );

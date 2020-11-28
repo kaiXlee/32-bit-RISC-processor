@@ -1,9 +1,24 @@
+# Compile of addr_bus_mux.v was successful.
+# Compile of ALU.v was successful with warnings.
+# Compile of ALU_test.v was successful.
+# Compile of flag_register.v was successful.
 # Compile of instruction_memory.v was successful.
+# Compile of ldr_mux.v was successful.
+# Compile of mem_control_unit.v was successful.
+# Compile of memory_and_instruction_fetch_test.v was successful.
+# Compile of memory_control.v was successful.
+# Compile of memory_unit_test.v was successful.
+# Compile of processor_32_bit.v was successful.
+# Compile of program_counter.v was successful.
 # Compile of RAM.v was successful.
-# 2 compiles, 0 failed with no errors.
+# Compile of RAM_test.v was successful.
+# Compile of RB_test.v was successful.
+# Compile of Register_Banks.v was successful.
+# Compile of processor_32_bit_test.v was successful.
+# 17 compiles, 0 failed with no errors.
 vsim engr468_16_bit_processor.processor_32_bit_test
 # vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:14:33 on Nov 26,2020
+# Start time: 16:08:39 on Nov 27,2020
 # Loading engr468_16_bit_processor.processor_32_bit_test
 # Loading engr468_16_bit_processor.processor_32_bit
 # Loading engr468_16_bit_processor.ram
@@ -17,1367 +32,242 @@ vsim engr468_16_bit_processor.processor_32_bit_test
 # Loading engr468_16_bit_processor.MUX
 # Loading engr468_16_bit_processor.DECODER
 # Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 68
+# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(68): [TFMPC] - Missing connection for port 'pc'.
 run
 #                    0Testing processor
-#                    0 instructionsss=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                    3 instructionsss=00000110001010000000000001100000
-#                   15 instructionsss=00000110000010000000000000100000
-#                   25 instructionsss=00000110001000000000000001000000
-#                   35 instructionsss=00000110000100000000000000110000
-#                   45 instructionsss=00000000000110010000100000000000
-#                   55 instructionsss=00001001001000010000000010000000
+#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Program counter:   1 || Instruction Fetched... 00000110000010000000000000100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
+# Program counter:   2 || Instruction Fetched... 00000110001000000000000001000000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   3 || Instruction Fetched... 00000110000100000000000000110000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   4 || Instruction Fetched... 00000000000110010000100000000000
+# Op Code: 0000 || flags N,Z,C,V: xxx0
+# Op Code: 0000 || flags N,Z,C,V: 0000
+#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   5 || Instruction Fetched... 00001001001000010000000010000000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
+# Program counter:   6 || Instruction Fetched... 00000010001010010000100000000000
+# Op Code: 0010 || flags N,Z,C,V: xxx0
+# Op Code: 0010 || flags N,Z,C,V: 0000
+#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
+# Program counter:   7 || Instruction Fetched... 00000001101110100010100000000000
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Op Code: 0001 || flags N,Z,C,V: 0100
+#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
+# Program counter:   8 || Instruction Fetched... 00001011000000011010000000000000
+# Op Code: 1011 || flags N,Z,C,V: 0100
+# Op Code: 1011 || flags N,Z,C,V: 0000
+# Program counter:   9 || Instruction Fetched... 00010110000110000000001111111000
+# Conditions not met, do nothing..
+# Conditions not met, do nothing..
+#                  105 R0=         x || R1=         4 || R2=         6 || R3=        14 || R4=        24 || R5=        24 || R6=         x || R7=         0
+# Program counter:  10 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Conditions not met, do nothing..
+# Program counter:  11 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  12 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  13 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  14 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  15 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  16 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  17 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  18 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+vsim engr468_16_bit_processor.processor_32_bit_test
+# End time: 16:10:58 on Nov 27,2020, Elapsed time: 0:02:19
+# Errors: 0, Warnings: 5
+# vsim engr468_16_bit_processor.processor_32_bit_test 
+# Start time: 16:10:58 on Nov 27,2020
+# Loading engr468_16_bit_processor.processor_32_bit_test
+# Loading engr468_16_bit_processor.processor_32_bit
+# Loading engr468_16_bit_processor.ram
+# Loading engr468_16_bit_processor.instruction_memory
+# Loading engr468_16_bit_processor.program_counter
+# Loading engr468_16_bit_processor.mem_control_unit
+# Loading engr468_16_bit_processor.memory_control
+# Loading engr468_16_bit_processor.addr_bus_mux
+# Loading engr468_16_bit_processor.ldr_mux
+# Loading engr468_16_bit_processor.register_banks
+# Loading engr468_16_bit_processor.MUX
+# Loading engr468_16_bit_processor.DECODER
+# Loading engr468_16_bit_processor.ALU
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 68
+# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(68): [TFMPC] - Missing connection for port 'pc'.
+run
+#                    0Testing processor
+#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Program counter:   1 || Instruction Fetched... 00000110000010000000000000100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
+# Program counter:   2 || Instruction Fetched... 00000110001000000000000001000000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   3 || Instruction Fetched... 00000110000100000000000000110000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   4 || Instruction Fetched... 00000000000110010000100000000000
+# Op Code: 0000 || flags N,Z,C,V: xxx0
+# Op Code: 0000 || flags N,Z,C,V: 0000
+#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   5 || Instruction Fetched... 00001001001000010000000010000000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
+# Program counter:   6 || Instruction Fetched... 00000010001010010000100000000000
+# Op Code: 0010 || flags N,Z,C,V: xxx0
+# Op Code: 0010 || flags N,Z,C,V: 0000
+#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
+# Program counter:   7 || Instruction Fetched... 00000001101110100010100000000000
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Op Code: 0001 || flags N,Z,C,V: 0100
+#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
+# Program counter:   8 || Instruction Fetched... 00001011000000011010000000000000
+# Op Code: 1011 || flags N,Z,C,V: 0100
+# Op Code: 1011 || flags N,Z,C,V: 0000
+# Program counter:   9 || Instruction Fetched... 00010110000110000000001111111000
+# Conditions not met, do nothing..
+# Conditions not met, do nothing..
+#                  105 R0=         x || R1=         4 || R2=         6 || R3=        14 || R4=        24 || R5=        24 || R6=         x || R7=         0
+# Program counter:  10 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Conditions not met, do nothing..
+# Program counter:  11 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  12 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  13 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  14 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  15 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  16 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  17 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  18 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+vsim engr468_16_bit_processor.ALU
+# End time: 16:12:29 on Nov 27,2020, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 3
+# vsim engr468_16_bit_processor.ALU 
+# Start time: 16:12:29 on Nov 27,2020
+# Loading engr468_16_bit_processor.ALU
+# Compile of mem_control_unit.v failed with 1 errors.
+# Compile of processor_32_bit.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of ALU.v failed with 2 errors.
+# Compile of mem_control_unit.v was successful.
+# Compile of processor_32_bit.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of addr_bus_mux.v was successful.
+# Compile of ALU.v failed with 2 errors.
+# Compile of ALU_test.v was successful.
+# Compile of flag_register.v was successful.
+# Compile of instruction_memory.v was successful.
+# Compile of ldr_mux.v was successful.
+# Compile of mem_control_unit.v was successful.
+# Compile of memory_and_instruction_fetch_test.v was successful.
+# Compile of memory_control.v was successful.
+# Compile of memory_unit_test.v was successful.
+# Compile of processor_32_bit.v was successful.
+# Compile of program_counter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of RAM_test.v was successful.
+# Compile of RB_test.v was successful.
+# Compile of Register_Banks.v was successful.
+# Compile of processor_32_bit_test.v was successful.
+# 17 compiles, 1 failed with 2 errors.
+# Compile of ALU.v failed with 1 errors.
+# Compile of ALU.v was successful with warnings.
+vsim engr468_16_bit_processor.processor_32_bit_test
+# End time: 16:25:57 on Nov 27,2020, Elapsed time: 0:13:28
+# Errors: 0, Warnings: 6
+# vsim engr468_16_bit_processor.processor_32_bit_test 
+# Start time: 16:25:58 on Nov 27,2020
+# Loading engr468_16_bit_processor.processor_32_bit_test
+# Loading engr468_16_bit_processor.processor_32_bit
+# Loading engr468_16_bit_processor.ram
+# Loading engr468_16_bit_processor.instruction_memory
+# Loading engr468_16_bit_processor.program_counter
+# Loading engr468_16_bit_processor.mem_control_unit
+# Loading engr468_16_bit_processor.memory_control
+# Loading engr468_16_bit_processor.addr_bus_mux
+# Loading engr468_16_bit_processor.ldr_mux
+# Loading engr468_16_bit_processor.register_banks
+# Loading engr468_16_bit_processor.MUX
+# Loading engr468_16_bit_processor.DECODER
+# Loading engr468_16_bit_processor.ALU
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 68
+# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(68): [TFMPC] - Missing connection for port 'pc'.
+run
+#                    0Testing processor
+#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Program counter:   1 || Instruction Fetched... 00000110000010000000000000100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
+# Program counter:   2 || Instruction Fetched... 00000110001000000000000001000000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   3 || Instruction Fetched... 00000110000100000000000000110000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   4 || Instruction Fetched... 00000000000110010000100000000000
+# Op Code: 0000 || flags N,Z,C,V: xxx0
+# Op Code: 0000 || flags N,Z,C,V: 0000
+#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
+# Program counter:   5 || Instruction Fetched... 00001001001000010000000010000000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
+# Program counter:   6 || Instruction Fetched... 00000010001010010000100000000000
+# Op Code: 0010 || flags N,Z,C,V: xxx0
+# Op Code: 0010 || flags N,Z,C,V: 0000
+#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
+# Program counter:   7 || Instruction Fetched... 00000001101110100010100000000000
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Op Code: 0001 || flags N,Z,C,V: 0100
+#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
+# Program counter:   8 || Instruction Fetched... 00001011000000011010000000000000
+# Op Code: 1011 || flags N,Z,C,V: 0100
+# Op Code: 1011 || flags N,Z,C,V: 0000
+# Program counter:   9 || Instruction Fetched... 00010110000110000000001111111000
+# Conditions not met, do nothing..
+# Conditions not met, do nothing..
+# Program counter:  10 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Conditions not met, do nothing..
+# Program counter:  11 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  12 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  13 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  14 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  15 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  16 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  17 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  18 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+run
+# Program counter:  19 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # ** Note: $finish    : C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit_test.v(26)
-#    Time: 57 ps  Iteration: 0  Instance: /processor_32_bit_test
+#    Time: 207 ps  Iteration: 0  Instance: /processor_32_bit_test
 # 1
 # Break in Module processor_32_bit_test at C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit_test.v line 26
-# Compile of processor_32_bit_test.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of Register_Banks.v was successful.
-# 2 compiles, 0 failed with no errors.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:22:03 on Nov 26,2020, Elapsed time: 0:07:30
-# Errors: 0, Warnings: 6
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:22:03 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x 
-#                   25 R1=         x || R2=        12 || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x 
-#                   35 R1=         x || R2=        12 || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x 
-#                   45 R1=         x || R2=        12 || R3=        12 || R4=         x || R5=        12 || R6=         x || R7=         x 
-#                   55 R1=         x || R2=        12 || R3=        12 || R4=        12 || R5=        12 || R6=         x || R7=         x 
-#                   65 R1=         x || R2=        12 || R3=        12 || R4=        12 || R5=        24 || R6=         x || R7=         x 
-#                   75 R1=         x || R2=        12 || R3=        12 || R4=        12 || R5=        24 || R6=         0 || R7=         x 
-#                   95 R1=4294967272 || R2=        12 || R3=        12 || R4=        12 || R5=        24 || R6=         0 || R7=         x 
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:29:59 on Nov 26,2020, Elapsed time: 0:07:56
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:29:59 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R3=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R4=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R5=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R6=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   25 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=00000000000000000000000000001100 || R3=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R4=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R5=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R6=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   35 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=00000000000000000000000000001100 || R3=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R4=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R5=00000000000000000000000000001100 || R6=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   45 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=00000000000000000000000000001100 || R3=00000000000000000000000000001100 || R4=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R5=00000000000000000000000000001100 || R6=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   55 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=00000000000000000000000000001100 || R3=00000000000000000000000000001100 || R4=00000000000000000000000000001100 || R5=00000000000000000000000000001100 || R6=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   65 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=00000000000000000000000000001100 || R3=00000000000000000000000000001100 || R4=00000000000000000000000000001100 || R5=00000000000000000000000000011000 || R6=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   75 R1=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx || R2=00000000000000000000000000001100 || R3=00000000000000000000000000001100 || R4=00000000000000000000000000001100 || R5=00000000000000000000000000011000 || R6=00000000000000000000000000000000 || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-#                   95 R1=11111111111111111111111111101000 || R2=00000000000000000000000000001100 || R3=00000000000000000000000000001100 || R4=00000000000000000000000000001100 || R5=00000000000000000000000000011000 || R6=00000000000000000000000000000000 || R7=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:30:43 on Nov 26,2020, Elapsed time: 0:00:44
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:30:43 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x 
-#                   25 R1=         x || R2=        12 || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x 
-#                   35 R1=         x || R2=        12 || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x 
-#                   45 R1=         x || R2=        12 || R3=        12 || R4=         x || R5=        12 || R6=         x || R7=         x 
-#                   55 R1=         x || R2=        12 || R3=        12 || R4=        12 || R5=        12 || R6=         x || R7=         x 
-#                   65 R1=         x || R2=        12 || R3=        12 || R4=        12 || R5=        24 || R6=         x || R7=         x 
-#                   75 R1=         x || R2=        12 || R3=        12 || R4=        12 || R5=        24 || R6=         0 || R7=         x 
-#                   95 R1=4294967272 || R2=        12 || R3=        12 || R4=        12 || R5=        24 || R6=         0 || R7=         x 
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:45:53 on Nov 26,2020, Elapsed time: 0:15:10
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:45:53 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 enable=    x
-#                    5 enable=   32
-#                   25 enable=    2
-#                   35 enable=   16
-#                   45 enable=    4
-#                   55 enable=    8
-#                   65 enable=   16
-#                   75 enable=   32
-#                   85 enable=  128
-#                   95 enable=    1
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:47:24 on Nov 26,2020, Elapsed time: 0:01:31
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:47:24 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x
-#                    5 destination= 5
-#                   25 destination= 1
-#                   35 destination= 4
-#                   45 destination= 2
-#                   55 destination= 3
-#                   65 destination= 4
-#                   75 destination= 5
-#                   85 destination= 7
-#                   95 destination= 0
-# Compile of Register_Banks.v failed with 1 errors.
-# Compile of Register_Banks.v failed with 1 errors.
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:56:23 on Nov 26,2020, Elapsed time: 0:08:59
-# Errors: 0, Warnings: 6
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:56:23 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-#                   25 R0=         x || R1=        12 || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-#                   35 R0=         x || R1=        12 || R2=         x || R3=         x || R4=        12 || R5=         x || R6=         x || R7=         x
-#                   45 R0=         x || R1=        12 || R2=        12 || R3=         x || R4=        12 || R5=         x || R6=         x || R7=         x
-#                   55 R0=         x || R1=        12 || R2=        12 || R3=        12 || R4=        12 || R5=         x || R6=         x || R7=         x
-#                   65 R0=         x || R1=        12 || R2=        12 || R3=        12 || R4=        24 || R5=         x || R6=         x || R7=         x
-#                   75 R0=         x || R1=        12 || R2=        12 || R3=        12 || R4=        24 || R5=         0 || R6=         x || R7=         x
-#                   85 R0=         x || R1=        12 || R2=        12 || R3=        12 || R4=        24 || R5=         0 || R6=         x || R7=       144
-#                   95 R0=4294967272 || R1=        12 || R2=        12 || R3=        12 || R4=        24 || R5=         0 || R6=         x || R7=       144
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 14:59:38 on Nov 26,2020, Elapsed time: 0:03:15
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 14:59:38 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=    x || R5=         x 
-#                    5 destination= 5 || enable=   32 || R5=         x 
-#                   25 destination= 1 || enable=    2 || R5=         x 
-#                   35 destination= 4 || enable=   16 || R5=         x 
-#                   45 destination= 2 || enable=    4 || R5=         x 
-#                   55 destination= 3 || enable=    8 || R5=         x 
-#                   65 destination= 4 || enable=   16 || R5=         x 
-#                   75 destination= 5 || enable=   32 || R5=         0 
-#                   85 destination= 7 || enable=  128 || R5=         0 
-#                   95 destination= 0 || enable=    1 || R5=         0 
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:01:29 on Nov 26,2020, Elapsed time: 0:01:51
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:01:29 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=    x || R5=         x || ldr_mux_in=         x
-#                    5 destination= 5 || enable=   32 || R5=         x || ldr_mux_in=        12
-#                   25 destination= 1 || enable=    2 || R5=         x || ldr_mux_in=        12
-#                   35 destination= 4 || enable=   16 || R5=         x || ldr_mux_in=        12
-#                   45 destination= 2 || enable=    4 || R5=         x || ldr_mux_in=        12
-#                   55 destination= 3 || enable=    8 || R5=         x || ldr_mux_in=        24
-#                   65 destination= 4 || enable=   16 || R5=         x || ldr_mux_in=         0
-#                   75 destination= 5 || enable=   32 || R5=         0 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=  128 || R5=         0 || ldr_mux_in=4294967272
-#                   95 destination= 0 || enable=    1 || R5=         0 || ldr_mux_in=        12
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:09:57 on Nov 26,2020, Elapsed time: 0:08:28
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:09:57 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=xxxxxxxxxxxxxxxx || R5=         x || ldr_mux_in=         x
-#                    5 destination= 5 || enable=0000000000100000 || R5=         x || ldr_mux_in=        12
-#                   25 destination= 1 || enable=0000000000000010 || R5=         x || ldr_mux_in=        12
-#                   35 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=        12
-#                   45 destination= 2 || enable=0000000000000100 || R5=         x || ldr_mux_in=        12
-#                   55 destination= 3 || enable=0000000000001000 || R5=         x || ldr_mux_in=        24
-#                   65 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=         0
-#                   75 destination= 5 || enable=0000000000100000 || R5=         0 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=0000000010000000 || R5=         0 || ldr_mux_in=4294967272
-#                   95 destination= 0 || enable=0000000000000001 || R5=         0 || ldr_mux_in=        12
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:12:42 on Nov 26,2020, Elapsed time: 0:02:45
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:12:42 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=xxxxxxxxxxxxxxxx || R5=         x || ldr_mux_in=         x
-# this is R5
-#                    5 destination= 5 || enable=0000000000100000 || R5=         x || ldr_mux_in=        12
-# this is R1
-#                   25 destination= 1 || enable=0000000000000010 || R5=         x || ldr_mux_in=        12
-#                   35 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=        12
-#                   45 destination= 2 || enable=0000000000000100 || R5=         x || ldr_mux_in=        12
-#                   55 destination= 3 || enable=0000000000001000 || R5=         x || ldr_mux_in=        24
-#                   65 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=         0
-# this is R5
-#                   75 destination= 5 || enable=0000000000100000 || R5=         0 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=0000000010000000 || R5=         0 || ldr_mux_in=4294967272
-#                   95 destination= 0 || enable=0000000000000001 || R5=         0 || ldr_mux_in=        12
-# Compile of addr_bus_mux.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_test.v was successful.
-# Compile of flag_register.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of ldr_mux.v was successful.
-# Compile of mem_control_unit.v was successful.
-# Compile of memory_and_instruction_fetch_test.v was successful.
-# Compile of memory_control.v was successful.
-# Compile of memory_unit_test.v was successful.
-# Compile of processor_32_bit.v was successful.
-# Compile of program_counter.v was successful.
 # Compile of RAM.v was successful.
-# Compile of RAM_test.v was successful.
-# Compile of RB_test.v was successful.
-# Compile of Register_Banks.v was successful.
 vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:17:02 on Nov 26,2020, Elapsed time: 0:04:20
-# Errors: 0, Warnings: 3
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:17:02 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-# Compile of processor_32_bit_test.v was successful.
-# 17 compiles, 0 failed with no errors.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=xxxxxxxxxxxxxxxx || R5=         x || ldr_mux_in=         x
-#                    5
-# this is R5
-#                    5 destination= 5 || enable=0000000000100000 || R5=         x || ldr_mux_in=        12
-#                   25
-# this is R1
-#                   25 destination= 1 || enable=0000000000000010 || R5=         x || ldr_mux_in=        12
-#                   35 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=        12
-#                   45 destination= 2 || enable=0000000000000100 || R5=         x || ldr_mux_in=        12
-#                   55 destination= 3 || enable=0000000000001000 || R5=         x || ldr_mux_in=        24
-#                   65 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=         0
-#                   75
-# this is R5
-#                   75 destination= 5 || enable=0000000000100000 || R5=         0 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=0000000010000000 || R5=         0 || ldr_mux_in=4294967272
-#                   95 destination= 0 || enable=0000000000000001 || R5=         0 || ldr_mux_in=        12
-# Compile of Register_Banks.v was successful.
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:18:29 on Nov 26,2020, Elapsed time: 0:01:27
-# Errors: 0, Warnings: 6
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:18:29 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-# ** Error: (vsim-3043) Unresolved reference to 'register'.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/RB1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/Register_Banks.v Line: 46
-# Error loading design
-# End time: 15:18:30 on Nov 26,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 3
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:19:41 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-# ** Error: (vsim-3043) Unresolved reference to 'register'.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/RB1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/Register_Banks.v Line: 46
-# Error loading design
-# End time: 15:19:41 on Nov 26,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 4
-# Compile of addr_bus_mux.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_test.v was successful.
-# Compile of flag_register.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of ldr_mux.v was successful.
-# Compile of mem_control_unit.v was successful.
-# Compile of memory_and_instruction_fetch_test.v was successful.
-# Compile of memory_control.v was successful.
-# Compile of memory_unit_test.v was successful.
-# Compile of processor_32_bit.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of RAM.v was successful.
-# Compile of RAM_test.v was successful.
-# Compile of RB_test.v was successful.
-# Compile of Register_Banks.v was successful.
-# Compile of processor_32_bit_test.v was successful.
-# 17 compiles, 0 failed with no errors.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:19:58 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=xxxxxxxxxxxxxxxx || R5=         x || ldr_mux_in=         x
-#                    5
-# this is R5
-# R5 is =         x
-#                    5 destination= 5 || enable=0000000000100000 || R5=         x || ldr_mux_in=        12
-#                   25
-# this is R1
-#                   25 destination= 1 || enable=0000000000000010 || R5=         x || ldr_mux_in=        12
-#                   35 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=        12
-#                   45 destination= 2 || enable=0000000000000100 || R5=         x || ldr_mux_in=        12
-#                   55 destination= 3 || enable=0000000000001000 || R5=         x || ldr_mux_in=        24
-#                   65 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=         0
-#                   75
-# this is R5
-# R5 is =         0
-#                   75 destination= 5 || enable=0000000000100000 || R5=         0 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=0000000010000000 || R5=         0 || ldr_mux_in=4294967272
-#                   95 destination= 0 || enable=0000000000000001 || R5=         0 || ldr_mux_in=        12
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:21:41 on Nov 26,2020, Elapsed time: 0:01:43
-# Errors: 0, Warnings: 5
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:21:41 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=xxxxxxxxxxxxxxxx || R5=         x || ldr_mux_in=         x
-#                    5
-# this is R5
-# ldr=         x || R5 is =         x
-#                    5 destination= 5 || enable=0000000000100000 || R5=         x || ldr_mux_in=        12
-#                   25
-# this is R1
-#                   25 destination= 1 || enable=0000000000000010 || R5=         x || ldr_mux_in=        12
-#                   35 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=        12
-#                   45 destination= 2 || enable=0000000000000100 || R5=         x || ldr_mux_in=        12
-#                   55 destination= 3 || enable=0000000000001000 || R5=         x || ldr_mux_in=        24
-#                   65 destination= 4 || enable=0000000000010000 || R5=         x || ldr_mux_in=         0
-#                   75
-# this is R5
-# ldr=         0 || R5 is =         0
-#                   75 destination= 5 || enable=0000000000100000 || R5=         0 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=0000000010000000 || R5=         0 || ldr_mux_in=4294967272
-#                   95 destination= 0 || enable=0000000000000001 || R5=         0 || ldr_mux_in=        12
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:25:57 on Nov 26,2020, Elapsed time: 0:04:16
+# End time: 18:14:08 on Nov 27,2020, Elapsed time: 1:48:10
 # Errors: 0, Warnings: 4
 # vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:25:57 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 destination= x || enable=xxxxxxxxxxxxxxxx || R5=         x || ldr_mux_in=         x
-#                    5
-# this is R5
-# ldr=         x || R5 is =         x
-#                    5
-# this is R5
-# ldr=        12 || R5 is =        12
-#                    5 destination= 5 || enable=0000000000100000 || R5=        12 || ldr_mux_in=        12
-#                   25
-# this is R1
-#                   25 destination= 1 || enable=0000000000000010 || R5=        12 || ldr_mux_in=        12
-#                   35 destination= 4 || enable=0000000000010000 || R5=        12 || ldr_mux_in=        12
-#                   45 destination= 2 || enable=0000000000000100 || R5=        12 || ldr_mux_in=        12
-#                   55 destination= 3 || enable=0000000000001000 || R5=        12 || ldr_mux_in=        24
-#                   65 destination= 4 || enable=0000000000010000 || R5=        12 || ldr_mux_in=         0
-#                   75
-# this is R5
-# ldr=         0 || R5 is =         0
-#                   75
-# this is R5
-# ldr=         x || R5 is =         x
-#                   75
-# this is R5
-# ldr=       144 || R5 is =       144
-#                   75 destination= 5 || enable=0000000000100000 || R5=       144 || ldr_mux_in=       144
-#                   85 destination= 7 || enable=0000000010000000 || R5=       144 || ldr_mux_in=       144
-#                   95 destination= 0 || enable=0000000000000001 || R5=       144 || ldr_mux_in=4294967272
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:27:06 on Nov 26,2020, Elapsed time: 0:01:09
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:27:06 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-#                   25 R0=         x || R1=        12 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-#                   35 R0=         x || R1=        12 || R2=         x || R3=         x || R4=        12 || R5=        12 || R6=         x || R7=         x
-#                   45 R0=         x || R1=        12 || R2=        12 || R3=         x || R4=        12 || R5=        12 || R6=         x || R7=         x
-#                   55 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=        12 || R5=        12 || R6=         x || R7=         x
-#                   65 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=        12 || R6=         x || R7=         x
-#                   75 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=       144 || R6=         x || R7=         x
-#                   85 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=       144 || R6=         x || R7=       144
-#                   95 R0=4294967272 || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=       144 || R6=         x || R7=       144
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:32:38 on Nov 26,2020, Elapsed time: 0:05:32
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:32:38 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-# ** Error: (vsim-3043) Unresolved reference to 'display'.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ALU File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ALU.v Line: 67
-# Error loading design
-# End time: 15:32:38 on Nov 26,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 3
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:33:01 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# immediate_value=0000000000001100
-#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-#                   25 R0=         x || R1=        12 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-#                   35 R0=         x || R1=        12 || R2=         x || R3=         x || R4=        12 || R5=        12 || R6=         x || R7=         x
-#                   45 R0=         x || R1=        12 || R2=        12 || R3=         x || R4=        12 || R5=        12 || R6=         x || R7=         x
-#                   55 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=        12 || R5=        12 || R6=         x || R7=         x
-#                   65 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=        12 || R6=         x || R7=         x
-#                   75 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=       144 || R6=         x || R7=         x
-#                   85 R0=         x || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=       144 || R6=         x || R7=       144
-#                   95 R0=4294967272 || R1=        12 || R2=        12 || R3=        24 || R4=         0 || R5=       144 || R6=         x || R7=       144
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:36:35 on Nov 26,2020, Elapsed time: 0:03:34
-# Errors: 0, Warnings: 5
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:36:35 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# immediate_value=0000000000001100
-#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# immediate_value=0000000000000100
-#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# immediate_value=0000000000001000
-#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# immediate_value=0000000000000110
-#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
-#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         0 || R5=        12 || R6=         x || R7=         x
-#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         0 || R5=        24 || R6=         x || R7=         x
-#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         0 || R5=        24 || R6=         x || R7=        24
-#                   95 R0=4294967286 || R1=         4 || R2=         6 || R3=        10 || R4=         0 || R5=        24 || R6=         x || R7=        24
-# Compile of ALU.v was successful.
-# Compile of Register_Banks.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of Register_Banks.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:49:20 on Nov 26,2020, Elapsed time: 0:12:45
-# Errors: 0, Warnings: 5
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:49:20 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# Result is: R 3 =          6
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# Result is: R 4 =         10
-# Result is: R 4 =          0
-# Result is: R 5 =          0
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# Result is: R 7 =         24
-# Result is: R 7 = 4294967294
-# Result is: R 7 =         24
-# R0 is =         x
-# Result is: R 0 =         24
-# R0 is =        24
-# Result is: R 0 = 4294967286
-# Compile of ALU.v was successful.
-# Compile of Register_Banks.v was successful.
-# 2 compiles, 0 failed with no errors.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 15:59:02 on Nov 26,2020, Elapsed time: 0:09:42
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 15:59:02 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# Result is: R 1 =         12
-# Result is: R 4 =         12
-# Result is: R 2 =         12
-# Result is: R 3 =         12
-# Result is: R 3 =          x
-# Result is: R 3 =         24
-# Result is: R 4 =         24
-# Result is: R 4 =          0
-# Result is: R 5 =          0
-# Result is: R 5 =          x
-# Result is: R 5 =        144
-# Result is: R 7 =        144
-# Result is: R 7 =          0
-# Result is: R 7 =        144
-# Result is: R 0 =        144
-# Result is: R 0 = 4294967272
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 16:10:29 on Nov 26,2020, Elapsed time: 0:11:27
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 16:10:29 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# Result is: R 3 =          6
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# Result is: R 4 =         10
-# Result is: R 4 =          0
-# Result is: R 5 =          0
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# Result is: R 7 =         24
-# Result is: R 7 = 4294967294
-# Result is: R 7 =         24
-# Result is: R 0 =         24
-# Result is: R 0 = 4294967286
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 16:12:28 on Nov 26,2020, Elapsed time: 0:01:59
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 16:12:28 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# Result is: R 3 =          6
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# source 2 =          6
-# Result is: R 4 =         10
-# source 2 =          6
-# Result is: R 4 =          0
-# Result is: R 5 =          0
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# Result is: R 7 =         24
-# Result is: R 7 = 4294967294
-# Result is: R 7 =         24
-# Result is: R 0 =         24
-# Result is: R 0 = 4294967286
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 16:21:11 on Nov 26,2020, Elapsed time: 0:08:43
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 16:21:11 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# Result is: R 3 =          6
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# Result is: R 4 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# Result is: R 4 =         24
-# Result is: R 5 =         24
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# Result is: R 7 =         24
-# Result is: R 7 = 4294967294
-# Result is: R 7 =          0
-# Result is: R 0 =          0
-# Result is: R 0 =         14
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 16:26:37 on Nov 26,2020, Elapsed time: 0:05:26
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 16:26:37 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# Result is: R 3 =          6
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# Result is: R 4 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# Result is: R 4 =         24
-# Result is: R 5 =         24
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# Result is: R 7 =         24
-# Result is: R 7 = 4294967294
-# Result is: R 7 =          0
-# Result is: R 0 =          0
-# Result is: R 0 =         14
-# A time value could not be extracted from the current line
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 17:43:15 on Nov 26,2020, Elapsed time: 1:16:38
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 17:43:15 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# flags N,Z,C,V: xxxx
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# flags N,Z,C,V: xxxx
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# flags N,Z,C,V: xxxx
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# flags N,Z,C,V: xxxx
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# flags N,Z,C,V: xxx0
-# Result is: R 3 =          6
-# flags N,Z,C,V: 0000
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# Result is: R 4 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# Result is: R 4 =         24
-# flags N,Z,C,V: xxx0
-# Result is: R 5 =         24
-# flags N,Z,C,V: 0000
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# flags N,Z,C,V: 1011
-# Result is: R 7 =         24
-# flags N,Z,C,V: 0100
-# Result is: R 7 = 4294967294
-# Result is: R 7 =          0
-# flags N,Z,C,V: 0100
-# Result is: R 0 =          0
-# flags N,Z,C,V: 0000
-# Result is: R 0 =         14
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 17:46:01 on Nov 26,2020, Elapsed time: 0:02:46
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 17:46:01 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-# flags N,Z,C,V: xxxx
-# Result is: R 5 =          x
-# Result is: R 5 =         12
-# flags N,Z,C,V: xxxx
-# Result is: R 1 =         12
-# Result is: R 1 =          4
-# flags N,Z,C,V: xxxx
-# Result is: R 4 =          4
-# Result is: R 4 =          8
-# flags N,Z,C,V: xxxx
-# Result is: R 2 =          8
-# Result is: R 2 =          6
-# flags N,Z,C,V: xxx0
-# Result is: R 3 =          6
-# flags N,Z,C,V: 0000
-# Result is: R 3 =          x
-# Result is: R 3 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# Result is: R 4 =         10
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# Result is: R 4 =         24
-# flags N,Z,C,V: xxx0
-# Result is: R 5 =         24
-# flags N,Z,C,V: 0000
-# Result is: R 5 =          x
-# Result is: R 5 =         24
-# flags N,Z,C,V: 1011
-# Result is: R 7 =         24
-# flags N,Z,C,V: 0100
-# Result is: R 7 = 4294967294
-# Result is: R 7 =          0
-# flags N,Z,C,V: 0100
-# Result is: R 0 =          0
-# flags N,Z,C,V: 0000
-# Compile of addr_bus_mux.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_test.v was successful.
-# Compile of flag_register.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of ldr_mux.v was successful.
-# Compile of mem_control_unit.v was successful.
-# Compile of memory_and_instruction_fetch_test.v was successful.
-# Compile of memory_control.v was successful.
-# Compile of memory_unit_test.v was successful.
-# Compile of processor_32_bit.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of RAM.v was successful.
-# Compile of RAM_test.v was successful.
-# Compile of RB_test.v was successful.
-# Compile of Register_Banks.v was successful.
-# Compile of processor_32_bit_test.v was successful.
-# 17 compiles, 0 failed with no errors.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 17:47:09 on Nov 26,2020, Elapsed time: 0:01:08
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 17:47:09 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
-# flags N,Z,C,V: 1011
-# flags N,Z,C,V: 0100
-#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# flags N,Z,C,V: 0100
-# flags N,Z,C,V: 0000
-#                   95 R0=         0 || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-temp_result
-# invalid command name "temp_result"
-# Compile of ALU.v was successful.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 17:52:44 on Nov 26,2020, Elapsed time: 0:05:35
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 17:52:44 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 11, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
-# flags N,Z,C,V: 1011
-# flags N,Z,C,V: 0100
-#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# flags N,Z,C,V: 0100
-# flags N,Z,C,V: 0000
-#                   95 R0=         z || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# Compile of ALU.v was successful.
-# Compile of mem_control_unit.v was successful.
-# Compile of Register_Banks.v failed with 1 errors.
-# 3 compiles, 1 failed with 1 error.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 18:53:02 on Nov 26,2020, Elapsed time: 1:00:18
-# Errors: 0, Warnings: 4
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 18:53:02 on Nov 26,2020
-# Loading engr468_16_bit_processor.processor_32_bit_test
-# Loading engr468_16_bit_processor.processor_32_bit
-# Loading engr468_16_bit_processor.ram
-# Loading engr468_16_bit_processor.instruction_memory
-# Loading engr468_16_bit_processor.program_counter
-# Loading engr468_16_bit_processor.mem_control_unit
-# Loading engr468_16_bit_processor.memory_control
-# Loading engr468_16_bit_processor.addr_bus_mux
-# Loading engr468_16_bit_processor.ldr_mux
-# Loading engr468_16_bit_processor.register_banks
-# Loading engr468_16_bit_processor.MUX
-# Loading engr468_16_bit_processor.DECODER
-# Loading engr468_16_bit_processor.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ctrl1'.  Expected 12, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_32_bit_test/processor1/ctrl1 File: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v Line: 67
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'pc'.
-# ** Warning: (vsim-3722) C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit.v(67): [TFMPC] - Missing connection for port 'reg_write'.
-run
-#                    0Testing processor
-#                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
-# flags N,Z,C,V: 1011
-# flags N,Z,C,V: 0100
-#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# flags N,Z,C,V: 0100
-# flags N,Z,C,V: 0000
-#                   95 R0=         z || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# Compile of addr_bus_mux.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_test.v was successful.
-# Compile of flag_register.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of ldr_mux.v was successful.
-# Compile of mem_control_unit.v was successful.
-# Compile of memory_and_instruction_fetch_test.v was successful.
-# Compile of memory_control.v was successful.
-# Compile of memory_unit_test.v was successful.
-# Compile of processor_32_bit.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of RAM.v was successful.
-# Compile of RAM_test.v was successful.
-# Compile of RB_test.v was successful.
-# Compile of Register_Banks.v was successful.
-# Compile of processor_32_bit_test.v was successful.
-# 17 compiles, 0 failed with no errors.
-vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 18:56:08 on Nov 26,2020, Elapsed time: 0:03:06
-# Errors: 0, Warnings: 5
-# vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 18:56:08 on Nov 26,2020
+# Start time: 18:14:08 on Nov 27,2020
 # Loading engr468_16_bit_processor.processor_32_bit_test
 # Loading engr468_16_bit_processor.processor_32_bit
 # Loading engr468_16_bit_processor.ram
@@ -1397,38 +287,79 @@ vsim engr468_16_bit_processor.processor_32_bit_test
 run
 #                    0Testing processor
 #                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
 #                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Program counter:   1 || Instruction Fetched... 00000110000010000000000000100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
 #                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
-# flags N,Z,C,V: 1011
-# flags N,Z,C,V: 0100
-#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# flags N,Z,C,V: 0100
-# flags N,Z,C,V: 0000
-# Compile of ALU.v was successful.
+# Program counter:   2 || Instruction Fetched... 00001100001100000000000000000000
+# Op Code: 1100 || flags N,Z,C,V: xxxx
+#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         4 || R7=         x
+# Program counter:   3 || Instruction Fetched... 00000110000100000000000000110000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         x || R5=        12 || R6=         4 || R7=         x
+# Program counter:   4 || Instruction Fetched... 00000000000110010000100000000000
+# Op Code: 0000 || flags N,Z,C,V: xxx0
+# Op Code: 0000 || flags N,Z,C,V: 0000
+#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         x || R5=        12 || R6=         4 || R7=         x
+# Program counter:   5 || Instruction Fetched... 00001001001000010000000010000000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         4 || R7=         x
+# Program counter:   6 || Instruction Fetched... 00000010001010010000100000000000
+# Op Code: 0010 || flags N,Z,C,V: xxx0
+# Op Code: 0010 || flags N,Z,C,V: 0000
+#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         4 || R7=         x
+# Program counter:   7 || Instruction Fetched... 00000001101110100010100000000000
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Op Code: 0001 || flags N,Z,C,V: 0100
+#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         4 || R7=         0
+# Program counter:   8 || Instruction Fetched... 00001011000000101010000000000000
+# Op Code: 1011 || flags N,Z,C,V: 0100
+# Program counter:   9 || Instruction Fetched... 00010110001010000000001111111000
+# Conditions not met, do nothing..
+# Conditions not met, do nothing..
+# Program counter:  10 || Instruction Fetched... 00001110000000011011000000000000
+# Op Code: 1110 || flags N,Z,C,V: 0100
+# Op Code: 1110 || flags N,Z,C,V: 0100
+# Program counter:  11 || Instruction Fetched... 00001101010000000011000000000000
+# Op Code: 1101 || flags N,Z,C,V: 0100
+# Op Code: 1101 || flags N,Z,C,V: 0100
+# Program counter:  12 || Instruction Fetched... 00000001110010011001000000000000
+# Op Code: 0001 || flags N,Z,C,V: xxxx
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Program counter:  13 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Conditions not met, do nothing..
+# Program counter:  14 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  15 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  16 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  17 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  18 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Compile of addr_bus_mux.v was successful.
+# Compile of ALU.v was successful with warnings.
+# Compile of ALU_test.v was successful.
+# Compile of flag_register.v was successful.
+# Compile of instruction_memory.v was successful.
+# Compile of ldr_mux.v was successful.
+# Compile of mem_control_unit.v was successful.
+# Compile of memory_and_instruction_fetch_test.v was successful.
+# Compile of memory_control.v was successful.
+# Compile of memory_unit_test.v was successful.
+# Compile of processor_32_bit.v was successful.
+# Compile of program_counter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of RAM_test.v was successful.
+# Compile of RB_test.v was successful.
+# Compile of Register_Banks.v was successful.
+# Compile of processor_32_bit_test.v was successful.
+# 17 compiles, 0 failed with no errors.
 vsim engr468_16_bit_processor.processor_32_bit_test
-# End time: 19:19:39 on Nov 26,2020, Elapsed time: 0:23:31
+# End time: 18:16:41 on Nov 27,2020, Elapsed time: 0:02:33
 # Errors: 0, Warnings: 4
 # vsim engr468_16_bit_processor.processor_32_bit_test 
-# Start time: 19:19:39 on Nov 26,2020
+# Start time: 18:16:41 on Nov 27,2020
 # Loading engr468_16_bit_processor.processor_32_bit_test
 # Loading engr468_16_bit_processor.processor_32_bit
 # Loading engr468_16_bit_processor.ram
@@ -1448,29 +379,53 @@ vsim engr468_16_bit_processor.processor_32_bit_test
 run
 #                    0Testing processor
 #                    0 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=         x || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
 #                    5 R0=         x || R1=         x || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
+# Program counter:   0 || Instruction Fetched... 00000110001010000000000001100000
+# Program counter:   1 || Instruction Fetched... 00000110000010000000000000100000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
 #                   25 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxxx
-#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         8 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         8 || R5=        12 || R6=         x || R7=         x
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-# source 2 =          6
-# immediate_value = 0010000000010000
-# flags N,Z,C,V: 0000
-#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         x || R7=         x
-# flags N,Z,C,V: xxx0
-# flags N,Z,C,V: 0000
-#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         x
-# flags N,Z,C,V: 1011
-# flags N,Z,C,V: 0100
-#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         x || R7=         0
-# flags N,Z,C,V: 0100
-# flags N,Z,C,V: 0000
+# Program counter:   2 || Instruction Fetched... 00001100001100000000000000000000
+# Op Code: 1100 || flags N,Z,C,V: xxxx
+#                   35 R0=         x || R1=         4 || R2=         x || R3=         x || R4=         x || R5=        12 || R6=         4 || R7=         x
+# Program counter:   3 || Instruction Fetched... 00000110000100000000000000110000
+# Op Code: 0110 || flags N,Z,C,V: xxxx
+#                   45 R0=         x || R1=         4 || R2=         6 || R3=         x || R4=         x || R5=        12 || R6=         4 || R7=         x
+# Program counter:   4 || Instruction Fetched... 00000000000110010000100000000000
+# Op Code: 0000 || flags N,Z,C,V: xxx0
+# Op Code: 0000 || flags N,Z,C,V: 0000
+#                   55 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=         x || R5=        12 || R6=         4 || R7=         x
+# Program counter:   5 || Instruction Fetched... 00001001001000010000000010000000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+# Op Code: 1001 || flags N,Z,C,V: 0000
+#                   65 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        12 || R6=         4 || R7=         x
+# Program counter:   6 || Instruction Fetched... 00000010001010010000100000000000
+# Op Code: 0010 || flags N,Z,C,V: xxx0
+# Op Code: 0010 || flags N,Z,C,V: 0000
+#                   75 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         4 || R7=         x
+# Program counter:   7 || Instruction Fetched... 00000001101110100010100000000000
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Op Code: 0001 || flags N,Z,C,V: 0100
+#                   85 R0=         x || R1=         4 || R2=         6 || R3=        10 || R4=        24 || R5=        24 || R6=         4 || R7=         0
+# Program counter:   8 || Instruction Fetched... 00001011000000101010000000000000
+# Op Code: 1011 || flags N,Z,C,V: 0100
+# Program counter:   9 || Instruction Fetched... 00010110001010000000001111111000
+# Conditions not met, do nothing..
+# Conditions not met, do nothing..
+# Program counter:  10 || Instruction Fetched... 00001110000000011011000000000000
+# Op Code: 1110 || flags N,Z,C,V: 0100
+# Op Code: 1110 || flags N,Z,C,V: 0100
+# Program counter:  11 || Instruction Fetched... 00001101010000000011000000000000
+# Op Code: 1101 || flags N,Z,C,V: 0100
+# Op Code: 1101 || flags N,Z,C,V: 0100
+# Program counter:  12 || Instruction Fetched... 00000001110010011001000000000000
+# Op Code: 0001 || flags N,Z,C,V: xxxx
+# Op Code: 0001 || flags N,Z,C,V: 1011
+# Program counter:  13 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Conditions not met, do nothing..
+# Program counter:  14 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  15 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  16 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  17 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Program counter:  18 || Instruction Fetched... xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -12,6 +12,14 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	processor_32_bit
 
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ALU.v} {2 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+** Warning: C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/ALU.v(20): (vlog-2182) 'flags' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	ALU
+
 } {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/Register_Banks.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/Register_Banks.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module register_banks
@@ -42,13 +50,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	memory_unit_test
 
-} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RAM.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/RAM.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ram
-
-Top level modules:
-	ram
-
 } {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit_test.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/processor_32_bit_test.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module processor_32_bit_test
@@ -63,7 +64,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ALU_test
 
-} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/instruction_memory.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:\Users\Kyle\Desktop\Engineering_Year_5\ENGR 468 Advanced Digital Systems Design\Project\32-bit-RISC-processor\instruction_memory.v}
+} {} {}} {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/instruction_memory.v} {1 {vlog -work engr468_16_bit_processor -stats=none {C:/Users/Kyle/Desktop/Engineering_Year_5/ENGR 468 Advanced Digital Systems Design/Project/32-bit-RISC-processor/instruction_memory.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module instruction_memory
 

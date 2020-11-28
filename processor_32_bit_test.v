@@ -23,7 +23,7 @@ module processor_32_bit_test;
 	#3 reset = 0;
 	#4 reset = 1;
 	
-	#100 $finish; // Stop the simulation after 50 time units
+	#200 $finish; // Stop the simulation after 50 time units
 	end
 	
 	always #5 clk =~ clk; // How to create a clk pulses of period 10
